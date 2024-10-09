@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <style>
+        .form-horizontal{
+            display:block;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .output{
+            font-size: 30px;
+            font-weight: bold;
+        }
+    </style>
+    <div class="container mt-5">
+        <h1 style="text-align: center;">Sentiment Analysis</h1>
+        <br/>
+      
+        <form action="/predict" method="POST" class="form-horizontal" role="form" align="center">
+            <div class="form-group"> 
+                <textarea class="form-control" id="text" name="text" rows="3" placeholder="Enter text to analyse" required></textarea>
+            </div> 
+            <button type="submit" class="btn btn-primary" style="text-align: center;">Analyze</button>
+            </form>
+        
+    </div>
+
+    <div class="container mt-5   form-horizontal" role="form" align="center">
+        <!--<h2>The sentiment of your text is: </h2>
+       
+        <p><strong>Text:</strong> {{ text }}</p>-->
+        <p class="output"><strong>Sentiment:</strong> {{ sentiment}}</p>
+        <a href="/" class="btn btn-secondary">Analyze another text</a>
+    </div>
+</body>
+</html>
