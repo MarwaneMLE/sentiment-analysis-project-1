@@ -10,7 +10,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route('/predict', methods=['POST', 'GET'])
+@app.route("/predict", methods=['POST', 'GET'])
 def predict():  
     text = request.form.get("text") 
     
